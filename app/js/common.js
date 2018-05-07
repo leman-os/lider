@@ -1,5 +1,6 @@
 $(function() {
-
-	// Custom JS
-
 });
+$(document).ready(function(){
+  $('.single-item').slick();
+});
+

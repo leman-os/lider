@@ -29,6 +29,17 @@
 </head>
 
 <body>
+<!-- forms -->
+	<div style="display: none;" id="hiddenform1">
+		<h2>Заказ звонка</h2>
+		 <form method="post" id="formtop" action="" >
+        <input type="text" class="txt" name="name" placeholder="ваше имя" /><br>
+        <input type="text" class="txt" name="phonenumber" placeholder="ваш телефон" /><br>
+        <input type="button" id="btnzv" value="Отправить" />
+    </form>
+	</div>
+<!-- forms end-->
+
 <!-- headline -->
 	<div class="headline">
 		<div class="container">
@@ -38,7 +49,13 @@
 					<div class="address">г.Наро-фоминск, ул. Ленина, д.20</div>
 					<div class="mail">manage@potolkilider.ru</div>
 				</div>
-				<a href="tel:99999999"><span class="phone">8 (900) 523 55 44</span><span class="btnzakaz"></span></a>
+				<div class="col-md-3">
+					<a href="tel:99999999"><div class="phone">8 (900) 523 55 44</div><div class="btnzakaz"></div></a>
+					<div class="zakazbtn">
+						<a data-fancybox data-src="#hiddenform1" data-animation-duration="700" href="javascript:;">
+							ЗАКАЗАТЬ ЗВОНОК
+						</a></div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -47,6 +64,7 @@
 <!-- menu -->
 	<div class="nav">
 		<div class="container">
+			<div class="row">
 			<ul>
 				<nav>
 				<li><a href="/item1">ГЛАВНАЯ</a></li>
@@ -56,6 +74,7 @@
 				<li><a href="/item5">КОНТАКТЫ</a></li>
 				</nav>
 			</ul>
+			</div>
 		</div>
 	</div>
 <!-- menu end-->
@@ -74,14 +93,15 @@
 	<div class="zamer">
 		<div class="container">
 			<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-7">
 						<div class="zamertext">Бесплатный выезд замерщика</div>
 						<div class="zamerphone">8 (900) 523 55 44</div>
 					</div>
-				<div class="col-md-6">
-					<form id="form1"> 
-						<input id="phone1" type="text" name="phone11" placeholder=" Номер телефона *">
-						<input id="submit_mail" class="button_zakaz" type="image" src="img/mdes/btnzakaz.png">
+				<div class="col-md-5">
+					<form id ="form1"> 
+						<input type="text" id="phone1" type="text" name="phone11" placeholder=" Номер телефона *"/>
+						<input type="button" id="submit_mail" class="button_zakaz"/>
+						<p>*или оставьте заявку и мы вам перезвоним</p>
 					</form>
 				</div>
 			</div>
@@ -93,23 +113,23 @@
 	<div class="preim">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-2">
+				<div class="col-md-2 item">
 					<img src="img/mdes/serv1.png" alt="безопасное оборудование">
 					<p>Безопасное оборудование</p>
 				</div>
-				<div class="col-md-2">
+				<div class="col-md-2 item">
 					<img src="img/mdes/serv2.png" alt="опытные профессионалы">
 					<p>Опытные профессионалы</p>
 				</div>
-				<div class="col-md-2">
+				<div class="col-md-2 item">
 					<img src="img/mdes/serv3.png" alt="экологичные материалы">
 					<p>Экологичные материалы</p>
 				</div>
-				<div class="col-md-2">
+				<div class="col-md-2 item">
 					<img src="img/mdes/serv4.png" alt="монтаж в день обращения">
 					<p>Монтаж в день обращения</p>
 				</div>
-				<div class="col-md-2">
+				<div class="col-md-2 item">
 					<img src="img/mdes/serv5.png" alt="гарантия на работы">
 					<p>Гарантия на работы</p>
 				</div>
@@ -136,7 +156,66 @@
 	</div>
 <!-- maintext end-->
 
+<!-- carousel -->
+	<div class="caros">
+		<div class="carosover">
+			<div class="container">
+				<h2>Наши работы</h2>
+				<div class="owl-carousel owl-theme">
+				  <div><img src="img/mdes/work-item1.png" alt=""></div>
+				  <div><img src="img/mdes/work-item2.png" alt=""></div>
+				  <div><img src="img/mdes/work-item3.png" alt=""></div>
+				  <div><img src="img/mdes/work-item1.png" alt=""></div>
+				  <div><img src="img/mdes/work-item2.png" alt=""></div>
+				  <div><img src="img/mdes/work-item3.png" alt=""></div>
+				</div>
 
+			</div>
+		</div>
+	</div>
+<!-- carousel end-->
+
+<!-- cert -->
+	<div class="cert">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2 col-md-offset-2"><img src="img/mdes/svid-item11.png" alt=""></div>
+				<div class="col-md-2"><img src="img/mdes/svid-item21.png" alt=""></div>
+				<div class="col-md-2"><img src="img/mdes/svid-item31.png" alt=""></div>
+				<div class="col-md-2"><img src="img/mdes/svid-item4.png" alt=""></div>
+			</div>
+		</div>
+	</div>
+<!-- cert end-->
+
+<!-- calc -->
+	<form name="cl_form"> 
+<div class="demo">
+ 
+<p>
+    <label for="amount">Площадь потолка, м2:</label>
+    <input type="number" min="6" max="30" id="amount" onchange="calc(this.value);" style="border:0; color:#f6931f; font-weight:bold; width:30px;" />
+</p>
+<div id="slider-range-max"></div>
+<p>
+    <label for="summ">Стоимость, руб:</label>
+    <input value="0" name="summ" readonly="readonly" maxlength="10" size="5" type="text">
+</p>
+<p>
+    <table border="1" cellpadding="3" style="border-collapse: collapse;">
+        <tr>
+            <td>
+                Площадь, м2: <p id="amounttd">0</p>
+            </td>
+            <td>
+                Стоимость, руб: <p id="summ">0</p>
+            </td>
+        <tr>
+    </table>
+</p>
+</div>
+</form>
+<!-- calc end-->
 	<script src="js/scripts.min.js"></script>
 
 

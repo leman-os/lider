@@ -12,16 +12,7 @@ $(function() {
         $( "#amount" ).val( $( "#slider-range-max" ).slider( "value" ) );
     });
       
-    function calc(par){
-    amount = document.cl_form.amount.value;
-  
-    //var summ;
-    summ = Number(amount)
-    document.cl_form.summ.value=summ;
-    document.getElementById("amounttd").innerHTML=amount;
-    document.getElementById("summ").innerHTML=summ;
-    return false; 
-    };
+    
 $(document).ready(function(){
   $('.single-item').slick();
 
@@ -51,3 +42,41 @@ $(document).ready(function(){
   });
 });
 
+/*calc start*/
+jQuery(function() {
+  var type = 400,
+    result_outptut = jQuery("#revenue span"),
+    square = 24
+    
+  function recount() {
+    revenue = square * type;
+    result_outptut.html(revenue + ' рублей');
+    $("#amount").val($("#slider-range-min").slider("value")+ ' кв.м.');
+  };
+  
+  jQuery('#type').change(function() {
+    type = jQuery('#type option:selected').val();
+    recount();
+  });
+  
+  $(document).on("change keyup", "#amount", function() {
+    square = +$(this).val();
+    $("#slider-range-min").slider("value", square);
+    recount();
+  });
+  
+  
+});
+$(function() {
+  $("#slider-range-min").slider({
+    range: "min",
+    value: 24,
+    min: 1,
+    max: 150,
+    slide: function(event, ui) {
+      $('#amount').val(ui.value).trigger("change");
+    }
+  });
+  $("#amount").val($("#slider-range-min").slider("value")+ ' кв.м.');
+});
+/*calc end*/

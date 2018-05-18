@@ -189,32 +189,50 @@
 <!-- cert end-->
 
 <!-- calc -->
-	<form name="cl_form"> 
-<div class="demo">
- 
-<p>
-    <label for="amount">Площадь потолка, м2:</label>
-    <input type="number" min="6" max="30" id="amount" onchange="calc(this.value);" style="border:0; color:#f6931f; font-weight:bold; width:30px;" />
-</p>
-<div id="slider-range-max"></div>
-<p>
-    <label for="summ">Стоимость, руб:</label>
-    <input value="0" name="summ" readonly="readonly" maxlength="10" size="5" type="text">
-</p>
-<p>
-    <table border="1" cellpadding="3" style="border-collapse: collapse;">
-        <tr>
-            <td>
-                Площадь, м2: <p id="amounttd">0</p>
-            </td>
-            <td>
-                Стоимость, руб: <p id="summ">0</p>
-            </td>
-        <tr>
-    </table>
-</p>
-</div>
-</form>
+	<div id="calculator">
+		<div class="container">
+			 <h2>Калькулятор потолков</h2>
+			<p>
+				<label for="amount">Площадь потолка:</label>
+			</p>
+			<div id="slider-range-min"></div>
+			<input type="text" id="amount" readonly style="border:0; font-weight:bold;">
+
+			<div id="typem">
+				    <p>Тип потолка:</p>
+					<p>
+						<select id="type">
+							<option value='400'>Мат-сатин</option>
+							<option value='450'>Глянец</option>
+							<option value='550'>Премиум</option>
+						</select>
+				    </p>
+			</div>
+
+			<div class="stoimost"><p id="revenue">СТОИМОСТЬ С РАБОТОЙ: <strong><span> 9600 рублей*</span></strong></p></div>
+				
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="zamertext2">Узнайте точную стоимость, заказав  бесплатный выезд замерщика</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="zamerphone">8 (900) 523 55 44</div>
+				</div>
+				<div class="col-md-6">
+					<form id ="form1"> 
+						<input type="text" id="phone1" type="text" name="phone11" placeholder=" Номер телефона *"/>
+						<input type="button" id="submit_mail" class="button_zakaz"/>
+						<p>*или оставьте заявку и мы вам перезвоним</p>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+	</div>
 <!-- calc end-->
 	<script src="js/scripts.min.js"></script>
 

@@ -42,6 +42,8 @@ gulp.task('js', ['common-js'], function() {
 		'app/libs/slick-carousel/slick/slick.min.js',
 		'app/libs/fancybox/dist/jquery.fancybox.min.js',
 		'app/libs/owl.carousel/dist/owl.carousel.min.js',
+		'app/libs/jquery-ui/jquery-ui.min.js',
+		'app/libs/jquery-ui/core.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))

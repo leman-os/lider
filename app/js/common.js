@@ -18,6 +18,17 @@ $(document).ready(function(){
 
   $('[data-fancybox]').fancybox();
 
+  $('[data-fancybox="images"]').fancybox({
+  loop: true,
+  animationEffect: "zoom",
+  animationDuration: 366,
+  transitionEffect: "fade",
+  buttons : [
+    'thumbs',
+    'close'
+  ]
+});
+
   $('.centersl').slick({
   infinite: true,
   slidesToShow: 3,

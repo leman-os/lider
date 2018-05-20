@@ -98,9 +98,9 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 gulp.task('deploy', function() {
 
 	var conn = ftp.create({
-		host:      'hostname.com',
-		user:      'username',
-		password:  'userpassword',
+		host:      'guiobnxo.beget.tech',
+		user:      'guiobnxo_admin',
+		password:  'K031na40',
 		parallel:  10,
 		log: gutil.log
 	});
@@ -110,7 +110,7 @@ gulp.task('deploy', function() {
 	'dist/.htaccess',
 	];
 	return gulp.src(globs, {buffer: false})
-	.pipe(conn.dest('/path/to/folder/on/server'));
+	.pipe(conn.dest('/'));
 
 });
 

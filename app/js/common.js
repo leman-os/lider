@@ -14,7 +14,11 @@ $(function() {
       
     
 $(document).ready(function(){
-  $('.single-item').slick();
+  $('.single-item').slick({
+    autoplay: true,
+  autoplaySpeed: 3000,
+  mobileFirst: true
+  });
 
   $('[data-fancybox]').fancybox();
 
@@ -36,6 +40,7 @@ $(document).ready(function(){
 });
   $('.owl-carousel').owlCarousel({
   	loop:true,
+    autoplay: true,
     margin:10,
     nav:true,
     navText: ["<img src='img/mdes/left.png'>", "<img src='img/mdes/right.png'>"],
